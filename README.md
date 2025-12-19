@@ -28,4 +28,4 @@ The project implements a **four-layer medallion architecture**, each serving a s
 
 - **Notebooks**: source, bronze, silver (modular ETL pipeline)
 - **Schemas**: Four dedicated schemas matching architecture layers
-- **Volume**: customer_extract_data in 00_source for CSV file storage
+- **Volume:** `customer_extract_data` in `00_source` for CSV file storage
