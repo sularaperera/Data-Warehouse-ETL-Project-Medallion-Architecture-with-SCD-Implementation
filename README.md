@@ -66,18 +66,8 @@ Source Layer → Bronze Layer → Silver Layer → Gold Layer
 
 The gold layer implements a **Star Schema** design optimized for analytical queries and reporting:
 
-```
-                    DimCustomer
-                         |
-                         |
-    DimProduct ----  FactSales  ---- DimPayments
-                         |
-                         |
-                    DimOrders
-                         |
-                         |
-                    DimCountry
-```
+<img src="https://github.com/sularaperera/Medallion-Architecture-Data-Warehouse-Daily-Sales-Analytics-Pipeline-Databricks/blob/main/star_schema.png"></img>
+
 
 ### Dimension Tables
 
