@@ -66,7 +66,7 @@ Source Layer → Bronze Layer → Silver Layer → Gold Layer
 
 The gold layer implements a **Star Schema** design optimized for analytical queries and reporting:
 
-<img src="https://github.com/sularaperera/Medallion-Architecture-Data-Warehouse-Daily-Sales-Analytics-Pipeline-Databricks/blob/main/star_schema.png"></img>
+<img src="https://github.com/sularaperera/Medallion-Architecture-Data-Warehouse-Daily-Sales-Analytics-Pipeline-Databricks/blob/main/star_schema_1.png"></img>
 
 
 ### Dimension Tables
