@@ -58,11 +58,11 @@ Source Layer → Bronze Layer → Silver Layer → Gold Layer
 
 
 
-## 📊 Data Model Design
+## Data Model Design
 
 ### Star Schema Implementation
 
-The gold layer implements a **Star Schema** design optimized for analytical queries and reporting:
+The gold layer implements a Star Schema design optimized for analytical queries and reporting:
 
 <img src="https://github.com/sularaperera/Medallion-Architecture-Data-Warehouse-Daily-Sales-Analytics-Pipeline-Databricks/blob/main/star_schema.png"></img>
 
@@ -72,7 +72,7 @@ The gold layer implements a **Star Schema** design optimized for analytical quer
 #### **1. DimCustomer**
 ```sql
 - DimCustomerKey (Surrogate Key - INT, Auto-increment)
-- customer_id (Natural Key - INT)
+- customer_id (INT)
 - customer_name (VARCHAR)
 - customer_email (VARCHAR)
 ```
@@ -80,7 +80,7 @@ The gold layer implements a **Star Schema** design optimized for analytical quer
 #### **2. DimProduct**
 ```sql
 - DimProductKey (Surrogate Key - INT, Auto-increment)
-- product_id (Natural Key - VARCHAR)
+- product_id (VARCHAR)
 - product_name (VARCHAR)
 - product_category (VARCHAR)
 ```
@@ -88,7 +88,7 @@ The gold layer implements a **Star Schema** design optimized for analytical quer
 #### **3. DimOrders**
 ```sql
 - DimOrderKey (Surrogate Key - INT, Auto-increment)
-- order_id (Natural Key - INT)
+- order_id (INT)
 - order_date (DATE)
 ```
 
@@ -119,15 +119,14 @@ The gold layer implements a **Star Schema** design optimized for analytical quer
 
 ### Why Surrogate Keys?
 
-The project implements **surrogate keys** (auto-incrementing integers) for all dimension tables instead of using natural business keys. This design decision provides several critical advantages:
+The project implements surrogate keys (auto-incrementing integers) for all dimension tables instead of using natural business keys. This design decision provides several critical advantages:
 
 1. **Stability**: Source system IDs can change or be reused; surrogate keys remain stable forever
-2. **Performance**: Integer-based joins are significantly faster than text or composite key joins, especially at scale
+2. **Performance**: Integer based joins are significantly faster than text or composite key joins, especially at scale
 3. **SCD Flexibility**: Enables seamless transition from SCD Type 1 to Type 2 without schema redesign
 4. **Source Independence**: Decouples the data warehouse from source system changes
 5. **Consistency**: Provides uniform key structure across all dimensions regardless of source formats
 
----
 
 
 
