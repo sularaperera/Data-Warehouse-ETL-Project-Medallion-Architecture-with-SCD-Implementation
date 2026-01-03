@@ -331,11 +331,11 @@ WHERE product_id = 3;
 **Result**: After re-running the MERGE, product_id = 3 shows the updated category 'electronics', and the old value 'category_3' is overwritten completely.
 
 **SCD Type 1 Characteristics**:
-- ✅ Simple to implement and maintain
-- ✅ Minimal storage requirements
-- ✅ Always shows current state
-- ❌ No historical tracking
-- ❌ Cannot analyze trends over time
+- Simple to implement and maintain
+- Minimal storage requirements
+- Always shows current state
+- No historical tracking
+- Cannot analyze trends over time
 - **Best For**: Reference data, corrections, attributes that don't require history
 
 ---
