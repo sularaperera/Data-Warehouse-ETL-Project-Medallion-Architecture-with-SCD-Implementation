@@ -436,8 +436,8 @@ SET product_category = 'new_category'
 WHERE product_id = 3;
 
 -- Run both MERGE steps again
-```
 
+```
 **Result**: 
 - Old record: `product_id=3, category='category_3', is_active='N', end_date=<timestamp>`
 - New record: `product_id=3, category='new_category', is_active='Y', end_date='3000-01-01'`
@@ -454,14 +454,3 @@ WHERE product_id = 3;
 ---
 
 
-
-
-
-
-
-
-
----
-
-**Project Status**: ✅ Completed  
-**Last Updated**: December 2024
