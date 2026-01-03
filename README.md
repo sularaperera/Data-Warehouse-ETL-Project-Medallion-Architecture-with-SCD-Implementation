@@ -130,7 +130,7 @@ The project implements surrogate keys (auto-incrementing integers) for all dimen
 
 
 
-## 🔄 ETL Pipeline Implementation
+## ETL Pipeline Implementation
 
 ### Phase 1: Initial Data Load
 
@@ -154,6 +154,14 @@ CREATE TABLE project_1_data_modeling.default.source_data (
 ```
 
 **Initial Data Load**: Inserted 3 sample records with order dates of `2024-07-01`
+```
+%sql
+-- Initial Load
+INSERT INTO project_1_data_modeling.default.source_data VALUES 
+(1000001, '2024-07-01', 20001, 'Alice Johnson', 'alice@gmail.com', 'SKU501', 'iPhone 14', 'Electronics', 1, 999.99, 'Credit Card', 'USA', '2024-07-01'),
+(1000002, '2024-07-01', 20010, 'Bob Smith', 'bob@yahoo.com', 'SKU502', 'AirPods Pro', 'Electronics', 2, 199.99, 'PayPal', 'USA', '2024-07-01'),
+(1000003, '2024-07-01', 20020, 'Charlie Brown', 'charlie@outlook.com', 'SKU503', 'Nike Shoes', 'Footwear', 1, 129.99, 'Credit Card', 'Canada', '2024-07-01');
+```
 
 #### Step 2: Bronze Layer - Incremental Load Logic
 ```python
